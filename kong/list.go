@@ -26,9 +26,10 @@ type ListOpt struct {
 
 // qs is used to construct query string for list endpoints
 type qs struct {
-	Size   int    `url:"size,omitempty"`
-	Offset string `url:"offset,omitempty"`
-	Tags   string `url:"tags,omitempty"`
+	Size    int    `url:"size,omitempty"`
+	Offset  string `url:"offset,omitempty"`
+	Cluster string `url:"cluster,omitempty"`
+	Tags    string `url:"tags,omitempty"`
 }
 
 // list fetches a list of an entity in Kong.
@@ -73,6 +74,7 @@ func constructQueryString(opt *ListOpt) qs {
 		return q
 	}
 	q.Size = opt.Size
+	q.Cluster = opt.Cluster
 	q.Offset = opt.Offset
 	var tagQS bytes.Buffer
 	tagCount := len(opt.Tags)
