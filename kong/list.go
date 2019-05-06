@@ -20,6 +20,8 @@ type ListOpt struct {
 	// If true, tags are ANDed, meaning only entities
 	// matching each tag in the Tags array are listed.
 	MatchAllTags bool
+
+	Cluster string `url:"cluster,omitempty"`
 }
 
 // qs is used to construct query string for list endpoints
