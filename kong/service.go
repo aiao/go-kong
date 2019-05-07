@@ -23,6 +23,7 @@ type Service struct {
 	UpdatedAt      *int      `json:"updated_at,omitempty" yaml:"updated_at,omitempty"`
 	WriteTimeout   *int      `json:"write_timeout,omitempty" yaml:"write_timeout,omitempty"`
 	Tags           []*string `json:"tags,omitempty" yaml:"tags,omitempty"`
+	Cluster        *string   `json:"cluster,omitempty" yaml:"cluster,omitempty"`
 }
 
 // Valid checks if all the fields in Service are valid.

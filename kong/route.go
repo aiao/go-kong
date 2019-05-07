@@ -52,6 +52,7 @@ type Route struct {
 	Sources       []*CIDRPort `json:"sources,omitempty" yaml:"sources,omitempty"`
 	Destinations  []*CIDRPort `json:"destinations,omitempty" yaml:"destinations,omitempty"`
 	Tags          []*string   `json:"tags,omitempty" yaml:"tags,omitempty"`
+	Cluster       *string     `json:"cluster,omitempty" yaml:"cluster,omitempty"`
 }
 
 // Valid checks if all the fields in Route are valid.
